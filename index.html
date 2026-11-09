@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101210">
+  <meta name="theme-color" content="#f3f4f6">
   <meta name="description" content="A friendly, personal checklist for setting up the software you need.">
   <title>Setup Checklist</title>
   <link rel="stylesheet" href="./styles.css">
@@ -12,36 +12,20 @@
 <body>
   <a class="skip-link" href="#software-list">Skip to checklist</a>
   <header class="topbar">
-    <a class="wordmark" href="./" aria-label="Setup Checklist home">
-      <span class="wordmark-icon" aria-hidden="true">S</span>
-      <span>SETUP<span class="wordmark-light">CHECKLIST</span></span>
-    </a>
-    <span class="platform-label"><span class="platform-dot" aria-hidden="true"></span> WINDOWS 11 EDITION</span>
+    <a class="wordmark" href="./">Setup Checklist</a>
+    <span class="platform-label">Windows 11</span>
   </header>
 
   <main>
     <section class="intro" aria-labelledby="page-title">
-      <div class="intro-copy">
-        <p class="eyebrow">YOUR NEW PC, READY TO GO</p>
-        <h1 id="page-title">Let’s get you<br><span>set up.</span></h1>
-        <p class="intro-description">A simple checklist for the apps you need. Pick a program to see a friendly step-by-step guide.</p>
-      </div>
-      <div class="intro-art" aria-hidden="true">
-        <div class="art-window">
-          <div class="art-window-top"><i></i><i></i><i></i></div>
-          <div class="art-check checked"><span>✓</span><b></b><b></b></div>
-          <div class="art-check"><span></span><b></b><b></b></div>
-          <div class="art-check"><span></span><b></b><b></b></div>
-          <div class="art-progress"><i></i></div>
-        </div>
-        <span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✳</span>
-      </div>
+      <h1 id="page-title">Software setup</h1>
+      <p class="intro-description">Check off programs you already have, or open a guide to install one.</p>
     </section>
 
     <section class="progress-section" aria-labelledby="progress-title">
       <div class="progress-heading">
         <div>
-          <p class="eyebrow">YOUR PROGRESS</p>
+          <p class="eyebrow">Progress</p>
           <h2 id="progress-title" aria-live="polite">0 of 0 programs installed</h2>
         </div>
         <button class="text-button" id="reset-progress" type="button">Reset progress</button>
@@ -55,7 +39,7 @@
     <section class="checklist-section" aria-labelledby="list-title">
       <div class="list-heading">
         <div>
-          <p class="eyebrow">THE ESSENTIALS</p>
+          <p class="eyebrow">Checklist</p>
           <h2 id="list-title">Your software</h2>
         </div>
         <button class="share-button" id="copy-link" type="button"><span aria-hidden="true">↗</span> Copy checklist link</button>
@@ -79,14 +63,10 @@
       <p id="empty-state" class="empty-state" hidden>No programs match that search. Try another name.</p>
     </section>
 
-    <aside class="manual-note">
-      <span class="manual-note-icon" aria-hidden="true">i</span>
-      <p><strong>A quick note:</strong> Checkmarks are manual. A website can’t tell whether an app is installed, and your progress stays on this device and browser.</p>
-    </aside>
+    <p class="manual-note">Checkmarks are manual and saved only in this browser. Sharing the page does not share progress.</p>
   </main>
 
   <footer class="footer">
-    <span>MADE TO MAKE SETUP A LITTLE EASIER</span>
     <span>Only download from official sources.</span>
   </footer>
 

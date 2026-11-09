@@ -102,7 +102,6 @@ function renderCard(program) {
   const safeId = escapeHtml(program.id);
   const safeName = escapeHtml(program.name);
   const safeDescription = escapeHtml(program.description);
-  const safeIcon = escapeHtml(program.icon || program.name.charAt(0));
   const safeUrl = escapeHtml(program.downloadUrl);
   const steps = program.steps.map(step => `<li>${step}</li>`).join('');
   const problems = program.problems.map(problem => `<li>${problem}</li>`).join('');
@@ -110,7 +109,6 @@ function renderCard(program) {
     <article class="software-card" data-id="${safeId}" data-installed="${isInstalled}">
       <div class="card-main">
         <div class="program-identity">
-          <div class="program-icon" data-icon="${safeId}" aria-hidden="true">${safeIcon}</div>
           <div><h3 class="program-name">${safeName}</h3><p class="program-description">${safeDescription}</p></div>
         </div>
         <div class="card-actions">
@@ -122,7 +120,7 @@ function renderCard(program) {
         </div>
       </div>
       <button class="help-toggle" type="button" aria-expanded="false" aria-controls="help-${safeId}">
-        <span><span class="help-symbol" aria-hidden="true">?</span> Help me install it <span class="guide-platform">Windows 11</span></span>
+        <span>Help me install it <span class="guide-platform">(Windows 11)</span></span>
         <span class="chevron" aria-hidden="true">⌄</span>
       </button>
       <div class="help-content" id="help-${safeId}" hidden>
