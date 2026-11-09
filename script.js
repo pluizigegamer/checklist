@@ -160,21 +160,6 @@ function showToast(message) {
   toastTimer = setTimeout(() => toast.classList.remove('visible'), 3200);
 }
 
-function showCopyFallback(url) {
-  const existing = document.querySelector('.copy-fallback');
-  if (existing) existing.remove();
-  const fallback = document.createElement('div');
-  fallback.className = 'copy-fallback';
-  fallback.setAttribute('role', 'status');
-  fallback.innerHTML = '<label for="share-url">Copy this link manually</label><input id="share-url" type="text" readonly><button type="button" aria-label="Close link field">Close</button>';
-  fallback.querySelector('input').value = url;
-  fallback.querySelector('button').addEventListener('click', () => fallback.remove());
-  document.body.append(fallback);
-  fallback.querySelector('input').focus();
-  fallback.querySelector('input').select();
-  showToast('Select the link and copy it to share.');
-}
-
 list.addEventListener('change', event => {
   const checkbox = event.target.closest('[data-installed-id]');
   if (!checkbox) return;
@@ -212,17 +197,6 @@ document.querySelector('#confirm-reset').addEventListener('click', event => {
   renderList();
   document.querySelector('#reset-dialog').close();
   showToast('Your checkmarks have been reset.');
-});
-
-document.querySelector('#copy-link').addEventListener('click', async () => {
-  const url = window.location.href;
-  try {
-    if (!navigator.clipboard || !window.isSecureContext) throw new Error('Clipboard unavailable');
-    await navigator.clipboard.writeText(url);
-    showToast('Checklist link copied. Your progress is not included.');
-  } catch {
-    showCopyFallback(url);
-  }
 });
 
 document.addEventListener('keydown', event => {

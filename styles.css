@@ -74,10 +74,8 @@ h1 span { color: var(--accent); }
 .checklist-section { padding: 48px 0 30px; }
 .list-heading { margin-bottom: 20px; }
 .list-heading h2 { margin: 0; font: 600 27px var(--display); }
-.share-button, .download-button, .secondary-button, .danger-button { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: 9px; border-radius: 5px; padding: 0 15px; cursor: pointer; font-size: 12px; font-weight: 700; transition: background .15s, border-color .15s, transform .15s; }
-.share-button { border: 1px solid #424941; background: #1b201b; color: var(--text); }
-.share-button:hover, .secondary-button:hover { border-color: #77816f; background: #242a23; }
-.share-button span { color: var(--accent); font-size: 16px; }
+.secondary-button, .danger-button { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: 9px; border-radius: 5px; padding: 0 15px; cursor: pointer; font-size: 12px; font-weight: 700; transition: background .15s, border-color .15s, transform .15s; }
+.secondary-button:hover { border-color: #77816f; background: #242a23; }
 .controls { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 15px; }
 .search-box { height: 42px; flex: 1; max-width: 350px; display: flex; align-items: center; gap: 10px; padding: 0 12px; border: 1px solid var(--line); border-radius: 5px; background: #171a17; }
 .search-icon { color: var(--muted); font-size: 21px; line-height: 1; transform: rotate(-20deg); }
@@ -116,8 +114,6 @@ kbd { color: var(--subtle); font: 10px var(--mono); white-space: nowrap; }
 .help-toggle[aria-expanded="true"] .chevron { transform: rotate(180deg); }
 .help-content { padding: 20px 24px 23px; border-top: 1px solid #303630; background: #161916; }
 .help-content[hidden] { display: none; }
-.guide-platform { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 15px; padding: 5px 8px; border: 1px solid #384034; border-radius: 3px; color: #c5d0ba; font: 10px var(--mono); }
-.guide-platform::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
 .help-content h3 { margin: 16px 0 8px; font: 600 14px var(--display); }
 .help-content ol, .help-content ul { margin: 0; padding-left: 21px; color: #b7beb4; font-size: 12px; }
 .help-content li { padding-left: 3px; margin: 6px 0; }
@@ -129,7 +125,6 @@ kbd { color: var(--subtle); font: 10px var(--mono); white-space: nowrap; }
 .manual-note-icon { width: 18px; height: 18px; flex: 0 0 18px; display: grid; place-items: center; border: 1px solid #77816f; border-radius: 50%; color: var(--accent); font: 500 11px var(--display); }
 .manual-note p { margin: 0; color: #aeb6a9; font-size: 11px; }
 .manual-note strong { color: var(--text); }
-.footer { max-width: 1100px; min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 15px; margin: 0 auto; padding: 0 30px; border-top: 1px solid rgba(255,255,255,.07); color: #7f877c; font-size: 9px; }
 .confirm-dialog { width: min(420px, calc(100% - 32px)); padding: 27px; border: 1px solid #424a3e; border-radius: 7px; background: #1b1f1b; color: var(--text); box-shadow: 0 25px 80px #000b; }
 .confirm-dialog::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(3px); }
 .confirm-dialog h2 { margin: 0 0 8px; font: 600 22px var(--display); }
@@ -140,11 +135,6 @@ kbd { color: var(--subtle); font: 10px var(--mono); white-space: nowrap; }
 .danger-button:hover { background: #ffa096; }
 .toast { position: fixed; z-index: 10; right: 22px; bottom: 22px; max-width: calc(100% - 44px); padding: 12px 16px; border: 1px solid #48533f; border-radius: 5px; background: #222920; color: var(--text); font-size: 12px; opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity .2s, transform .2s; }
 .toast.visible { opacity: 1; transform: translateY(0); }
-.copy-fallback { position: fixed; z-index: 11; right: 22px; bottom: 76px; width: min(460px, calc(100% - 44px)); display: grid; grid-template-columns: 1fr auto; gap: 9px; padding: 14px; border: 1px solid #48533f; border-radius: 5px; background: #1b201b; box-shadow: 0 12px 35px #0008; }
-.copy-fallback label { grid-column: 1 / -1; color: var(--text); font-size: 12px; font-weight: 600; }
-.copy-fallback input { min-width: 0; height: 38px; padding: 0 9px; border: 1px solid #424941; border-radius: 4px; background: #101210; color: var(--accent); font-size: 11px; }
-.copy-fallback button { padding: 0 11px; border: 1px solid #424941; border-radius: 4px; background: #242a23; color: var(--text); cursor: pointer; font-size: 11px; }
-.copy-fallback button:hover { border-color: #77816f; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes float-in { from { opacity: 0; transform: translate(10px,8px) rotate(4deg); } to { opacity: 1; transform: translate(0,0) rotate(4deg); } }
@@ -162,7 +152,6 @@ kbd { color: var(--subtle); font: 10px var(--mono); white-space: nowrap; }
   .progress-heading h2 { font-size: 18px; }
   .checklist-section { padding-top: 39px; }
   .list-heading h2 { font-size: 24px; }
-  .share-button { min-height: 38px; padding: 0 10px; font-size: 10px; }
   .controls { align-items: stretch; flex-direction: column; }
   .search-box { max-width: none; }
   .filters { justify-content: space-between; }
@@ -178,8 +167,6 @@ kbd { color: var(--subtle); font: 10px var(--mono); white-space: nowrap; }
   .wordmark { font-size: 11px; gap: 7px; }
   .platform-label { font-size: 8px; }
   h1 { font-size: 46px; }
-  .share-button { font-size: 0; gap: 5px; }
-  .share-button span { font-size: 16px; }
   .dialog-actions { flex-direction: column-reverse; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -221,9 +208,8 @@ h1 span { color: inherit; }
 .privacy-note, .program-description, .manual-note p { color: var(--muted); font-size: 13px; }
 .checklist-section { padding-top: 28px; }
 .list-heading h2 { font: 600 21px var(--display); }
-.share-button, .secondary-button, .danger-button { min-height: 38px; border-radius: 0; transition: none; }
-.share-button { border-color: #aeb4bb; background: #fff; }
-.share-button:hover, .secondary-button:hover { border-color: #8a9096; background: #f0f2f4; }
+.secondary-button, .danger-button { min-height: 38px; border-radius: 0; transition: none; }
+.secondary-button:hover { border-color: #8a9096; background: #f0f2f4; }
 .controls { align-items: center; }
 .search-box, .filters { border-radius: 0; background: #fff; }
 .search-box:focus-within { border-color: var(--accent); box-shadow: none; }
@@ -251,15 +237,12 @@ h1 span { color: inherit; }
 .empty-state { border-radius: 0; }
 .manual-note { gap: 0; padding: 0; border: 0; border-radius: 0; background: transparent; }
 .manual-note-icon { display: none; }
-.footer { min-height: 48px; border-top-color: var(--line); color: var(--muted); }
 .confirm-dialog { border-radius: 0; box-shadow: none; }
 .confirm-dialog::backdrop { backdrop-filter: none; }
 .confirm-dialog h2 { font: 600 20px var(--display); }
 .danger-button { border-radius: 0; background: var(--danger); color: #fff; }
 .danger-button:hover { background: #811b1b; }
 .toast { border-radius: 0; background: #202124; box-shadow: none; }
-.copy-fallback { border-radius: 0; background: #fff; box-shadow: none; }
-.copy-fallback input, .copy-fallback button { border-radius: 0; background: #fff; }
 :focus-visible { outline-color: var(--accent); }
 
 @media (max-width: 650px) {
@@ -267,5 +250,4 @@ h1 span { color: inherit; }
   .intro-art { display: none; }
   .card-main { grid-template-columns: 1fr; }
   .card-actions { justify-content: space-between; flex-wrap: wrap; }
-  .footer { flex-direction: row; }
 }
