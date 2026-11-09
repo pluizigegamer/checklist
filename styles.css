@@ -221,7 +221,7 @@ h1 span { color: inherit; }
 .privacy-note, .program-description, .manual-note p { color: var(--muted); font-size: 13px; }
 .checklist-section { padding-top: 28px; }
 .list-heading h2 { font: 600 21px var(--display); }
-.share-button, .download-button, .secondary-button, .danger-button { min-height: 38px; border-radius: 0; transition: none; }
+.share-button, .secondary-button, .danger-button { min-height: 38px; border-radius: 0; transition: none; }
 .share-button { border-color: #aeb4bb; background: #fff; }
 .share-button:hover, .secondary-button:hover { border-color: #8a9096; background: #f0f2f4; }
 .controls { align-items: center; }
@@ -240,8 +240,6 @@ h1 span { color: inherit; }
 .installed-label { color: var(--text); font-size: 13px; }
 .installed-label input { accent-color: var(--accent); }
 .software-card[data-installed="true"] .installed-label { color: #285d30; }
-.download-button { border-color: var(--accent); background: var(--accent); color: var(--accent-ink); }
-.download-button:hover { background: #10477f; transform: none; }
 .help-toggle { min-height: 42px; border-radius: 0; background: #f8f9fa; font-size: 13px; }
 .help-toggle:hover { background: #eef0f2; }
 .help-toggle .help-symbol, .chevron { color: var(--muted); }

@@ -5,9 +5,8 @@ const programs = [
     name: 'Steam',
     icon: 'S',
     description: 'A popular place to buy, download, and play PC games.',
-    downloadUrl: 'https://store.steampowered.com/about/',
     steps: [
-      'Open the <a href="https://store.steampowered.com/about/" target="_blank" rel="noopener noreferrer">official Steam download page</a> and select <strong>Install Steam</strong>. Save the installer when your browser asks.',
+      'In your browser, go to <strong>store.steampowered.com</strong>. Select <strong>Install Steam</strong> and save the installer.',
       'Open your <strong>Downloads</strong> folder and double-click <strong>SteamSetup.exe</strong>. If Windows asks whether to allow this app to make changes, check that the publisher is Valve and choose <strong>Yes</strong>. Never bypass a warning if the publisher or file looks unexpected.',
       'Choose your language and where to install Steam, or keep the suggested choices. Select <strong>Install</strong>, then <strong>Finish</strong>. Steam may update itself; let it complete.',
       'Choose <strong>Create a Free Account</strong> if you are new, then follow the email verification steps. If you already have an account, sign in with your Steam name and password. Use Steam Guard if prompted; it helps protect your account.',
@@ -24,9 +23,8 @@ const programs = [
     name: 'Discord',
     icon: 'D',
     description: 'Chat with friends using text, voice, and video.',
-    downloadUrl: 'https://discord.com/download',
     steps: [
-      'Go to the <a href="https://discord.com/download" target="_blank" rel="noopener noreferrer">official Discord download page</a> and choose the Windows download. Save the installer.',
+      'In your browser, go to <strong>discord.com/download</strong> and choose the download for your computer. Save the installer.',
       'Open your <strong>Downloads</strong> folder and double-click the Discord setup file. If Windows asks for permission, check that the app is Discord and choose <strong>Yes</strong> only if you downloaded it from discord.com.',
       'Discord installs and opens automatically. Let it finish any updates. You can also launch it later from the Start menu by searching for Discord.',
       'Create an account with an email address, username, and password, or sign in to an existing account. Follow any email verification prompt. You can skip joining a server until you have an invite.',
@@ -43,9 +41,8 @@ const programs = [
     name: 'Epic Games Launcher',
     icon: 'E',
     description: 'Browse, download, and launch games from Epic Games.',
-    downloadUrl: 'https://store.epicgames.com/en-US/download',
     steps: [
-      'Visit the <a href="https://store.epicgames.com/en-US/download" target="_blank" rel="noopener noreferrer">official Epic Games download page</a> and select <strong>Download Epic Games Launcher</strong>. Save the Windows installer.',
+      'In your browser, go to <strong>store.epicgames.com</strong> and find the Epic Games Launcher download. Save the installer.',
       'Open your <strong>Downloads</strong> folder and double-click the Epic Games Launcher installer. If Windows requests permission, confirm it is from Epic Games before selecting <strong>Yes</strong>.',
       'Follow the installer prompts and keep the suggested options if you are unsure. When installation finishes, the launcher may open and download updates.',
       'Sign in with an Epic Games account or choose the option to create one. Complete any email verification. You can also use a supported sign-in option shown by Epic if you already use one.',
@@ -102,7 +99,6 @@ function renderCard(program) {
   const safeId = escapeHtml(program.id);
   const safeName = escapeHtml(program.name);
   const safeDescription = escapeHtml(program.description);
-  const safeUrl = escapeHtml(program.downloadUrl);
   const steps = program.steps.map(step => `<li>${step}</li>`).join('');
   const problems = program.problems.map(problem => `<li>${problem}</li>`).join('');
   return `
@@ -116,11 +112,10 @@ function renderCard(program) {
             <input id="installed-${safeId}" type="checkbox" data-installed-id="${safeId}" ${isInstalled ? 'checked' : ''}>
             <span>I have installed this</span>
           </label>
-          <a class="download-button" href="${safeUrl}" target="_blank" rel="noopener noreferrer">Official download <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <button class="help-toggle" type="button" aria-expanded="false" aria-controls="help-${safeId}">
-        <span>Help me install it <span class="guide-platform">(Windows 11)</span></span>
+        <span>Help me install it</span>
         <span class="chevron" aria-hidden="true">⌄</span>
       </button>
       <div class="help-content" id="help-${safeId}" hidden>
